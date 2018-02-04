@@ -1,4 +1,4 @@
-# y
+# VUE templtes for apps
 
 > A Vue.js project
 
