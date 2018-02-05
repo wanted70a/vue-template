@@ -10,6 +10,7 @@
 
 <script>
 import api from '../api/api.services'
+
 export default {
     created(){
        this.$store.dispatch('fetchPosts')

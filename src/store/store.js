@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-
 import api from '../api/api.services'
 
 
@@ -11,6 +10,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
       count: 0,
+      name:'Marko',
+      age:23,
       posts:[],
     },
     mutations: {

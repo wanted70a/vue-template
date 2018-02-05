@@ -1,11 +1,13 @@
 <template>
   <div class="">
-    <h1>{{count}}</h1>
+    <h1>{{count}} {{name}} {{age}}</h1>
     <button type="button" v-on:click='increase'>Add 20</button>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data () {
     return {
@@ -13,9 +15,11 @@ export default {
     }
   },
   computed:{
-    count(){
-      return this.$store.state.count;
-    }
+      ...mapState([
+          'count',
+          'name',
+          'age'
+      ])
   },
   methods:{
     increase(){
@@ -27,4 +31,4 @@ export default {
 
 <style lang="scss">
 
-</style>
+</style> 
