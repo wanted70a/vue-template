@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <h1>{{count}}</h1>
-    <button type="button" @click='increase(20)'>Add 20</button>
+    <button type="button" v-on:click='increase'>Add 20</button>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ export default {
     }
   },
   methods:{
-    increase(x){
-      this.$store.commit({ type:'increase', amount:x})
+    increase(){
+        return this.$store.commit('increase',10)
     }
   }
 }
